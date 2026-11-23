@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Visitor Counter</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-slate-950 text-white">
+
+    <div class="text-center bg-slate-900 p-10 rounded-2xl shadow-2xl border border-slate-700">
+
+        <h1 class="text-4xl font-bold text-blue-400 mb-4">
+            Hello World!
+        </h1>
+
+        <h2 class="text-xl text-gray-300 mb-4">
+            Visitors Count
+        </h2>
+
+        <p id="count" class="text-6xl font-extrabold text-green-400 mb-6">
+            0
+        </p>
+
+        <button
+            onclick="increaseCount()"
+            class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-xl font-semibold transition duration-300">
+            Visit +1
+        </button>
+
+    </div>
+
+    <script>
+        let visitors = 0;
+
+        function increaseCount() {
+            visitors++;
+            document.getElementById("count").innerText = visitors;
+        }
+    </script>
+
+</body>
+</html>
